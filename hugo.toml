@@ -1,4 +1,5 @@
 baseURL = "https://azmisblog.netlify.app/"
+languageCode = "en-us"
 title = "Azmi's Blog"
 theme = "PaperMod"
 enableRobotsTXT = true
@@ -11,6 +12,16 @@ enableRobotsTXT = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   defaultTheme = "auto"
+  # Add these lines:
+  ShowFullTextinRSS = true
+  ShowShareButtons = true
+  ShowToc = false
+  disableSpecial1stPost = false
+  displayFullLangName = true
+  
+  # Homepage settings
+  homeInfoParams.Title = "Welcome to Azmi's Blog"
+  homeInfoParams.Content = "My personal blog about tech, development, and more."
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
