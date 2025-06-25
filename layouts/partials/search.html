@@ -1,0 +1,14 @@
+<div id="search-container" style="margin-top: 2rem;">
+  <input id="search" type="text" placeholder="Search blog posts..." style="width: 100%; padding: 0.5rem; font-size: 1rem;" />
+  <div id="search-results" style="margin-top: 1rem;"></div>
+</div>
+
+<link rel="stylesheet" href="/pagefind/pagefind.css" />
+<script src="/pagefind/pagefind.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    new PagefindUI({
+      element: "#search-container"
+    });
+  });
+</script>
