@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+{{- partial "head.html" . }}
+<body>
+{{- partial "header.html" . }}
+
+<main class="main">
+    <div class="post-content">
+        <h1>Search</h1>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search posts..." 
+                   style="width: 100%; padding: 10px; margin: 20px 0; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;">
+            
+            <div id="searchResults"></div>
+            <div id="noResults" style="display: none; text-align: center; color: #666; margin-top: 20px;">
+                No posts found matching your search.
+            </div>
+        </div>
+    </div>
+</main>
+
+{{- partial "footer.html" . }}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+<script>
+let fuse;
+let searchData = [];
+
+// Load search index
+fetch('/index.json')
+    .then(response => response.json())
+    .then(data => {
+        searchData = data;
+        fuse = new Fuse(data, {
+            keys: ['title', 'content', 'tags'],
+            threshold: 0.3,
+            includeScore: true
+        });
+    });
+
+// Search functionality
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+const noResults = document.getElementById('noResults');
+
+searchInput.addEventListener('input', function() {
+    const query = this.value.trim();
+    
+    if (query.length === 0) {
+        searchResults.innerHTML = '';
+        noResults.style.display = 'none';
+        return;
+    }
+    
+    if (query.length < 2) return;
+    
+    const results = fuse.search(query);
+    displayResults(results);
+});
+
+function displayResults(results) {
+    if (results.length === 0) {
+        searchResults.innerHTML = '';
+        noResults.style.display = 'block';
+        return;
+    }
+    
+    noResults.style.display = 'none';
+    
+    const html = results.map(result => {
+        const item = result.item;
+        return `
+            <article class="post-entry" style="margin-bottom: 20px; padding: 20px; border: 1px solid #eee; border-radius: 8px;">
+                <header class="entry-header">
+                    <h2><a href="${item.permalink}">${item.title}</a></h2>
+                    <div class="entry-meta">
+                        <time>${item.date}</time>
+                        ${item.tags ? `<span> • Tags: ${item.tags.join(', ')}</span>` : ''}
+                    </div>
+                </header>
+                <div class="entry-content">
+                    <p>${item.summary || item.content.substring(0, 200) + '...'}</p>
+                </div>
+            </article>
+        `;
+    }).join('');
+    
+    searchResults.innerHTML = html;
+}
+
+// Focus search input on page load
+document.addEventListener('DOMContentLoaded', function() {
+    searchInput.focus();
+});
+</script>
+
+<style>
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-entry {
+    transition: box-shadow 0.2s ease;
+}
+
+.post-entry:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.entry-header h2 {
+    margin: 0 0 10px 0;
+}
+
+.entry-header h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.entry-header h2 a:hover {
+    color: var(--primary, #007acc);
+}
+
+.entry-meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.entry-content p {
+    margin: 0;
+    line-height: 1.6;
+}
+</style>
+
+</body>
+</html>
