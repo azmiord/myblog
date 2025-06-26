@@ -1,6 +1,6 @@
 ---
-title: "Content Placeholder: Building Something Great"
-date: 2025-06-26T21:30:00+07:00
+title: "Building Something Great"
+date: 2025-06-25T10:00:00+07:00
 draft: false
 description: "A placeholder post while I work on building out my blog with exciting content to come."
 tags: ["meta", "blog", "updates"]

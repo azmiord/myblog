@@ -5,8 +5,22 @@
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Azmi&#39;s Blog</description>
     <generator>Hugo -- 0.147.9</generator>
-    <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <language>en</language>
+    <lastBuildDate>Wed, 25 Jun 2025 10:00:00 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Something Great</title>
+      <link>http://localhost:1313/posts/first-real-post/</link>
+      <pubDate>Wed, 25 Jun 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/first-real-post/</guid>
+      <description>A placeholder post while I work on building out my blog with exciting content to come.</description>
+    </item>
+    <item>
+      <title>Test Post</title>
+      <link>http://localhost:1313/posts/test/</link>
+      <pubDate>Wed, 25 Jun 2025 10:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/test/</guid>
+      <description>&lt;p&gt;This is a test post.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

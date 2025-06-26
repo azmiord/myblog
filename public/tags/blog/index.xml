@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Azmi&#39;s Blog</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Azmi&#39;s Blog</description>
+    <title>Blog on Azmi&#39;s Blog</title>
+    <link>http://localhost:1313/tags/blog/</link>
+    <description>Recent content in Blog on Azmi&#39;s Blog</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en</language>
     <lastBuildDate>Wed, 25 Jun 2025 10:00:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Something Great</title>
       <link>http://localhost:1313/posts/first-real-post/</link>
       <pubDate>Wed, 25 Jun 2025 10:00:00 +0700</pubDate>
       <guid>http://localhost:1313/posts/first-real-post/</guid>
       <description>A placeholder post while I work on building out my blog with exciting content to come.</description>
-    </item>
-    <item>
-      <title>Test Post</title>
-      <link>http://localhost:1313/posts/test/</link>
-      <pubDate>Wed, 25 Jun 2025 10:00:00 +0700</pubDate>
-      <guid>http://localhost:1313/posts/test/</guid>
-      <description>&lt;p&gt;This is a test post.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
