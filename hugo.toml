@@ -1,0 +1,25 @@
+baseURL = "https://yourdomain.com"
+languageCode = "en-us"
+title = "Azmi's Blog"
+theme = "PaperMod"
+
+[params]
+ShowReadingTime = false
+ShowShareButtons = false
+ShowPostNavLinks = false
+ShowBreadCrumbs = false
+ShowCodeCopyButtons = false
+ShowWordCount = false
+ShowRssButtonInSectionTermList = false
+UseHugoToc = false
+disableSpecial1stPost = true
+
+[params.homeInfoParams]
+Title = "Azmi's Blog"
+Content = "Your brief bio or tagline here"
+
+[[menu.main]]
+identifier = "archive"
+name = "Archive"
+url = "/archives/"
+weight = 10

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Azmi&#39;s Blog</title>
+    <link>https://yourdomain.com/posts/</link>
+    <description>Recent content in Posts on Azmi&#39;s Blog</description>
+    <generator>Hugo -- 0.147.9</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yourdomain.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://yourdomain.com/posts/my-first-post/</link>
+      <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://yourdomain.com/posts/my-first-post/</guid>
+      <description>&lt;p&gt;Your content here. Keep it simple and focused, just like Seth Godin&amp;rsquo;s posts.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
